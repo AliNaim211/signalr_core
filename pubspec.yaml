@@ -10,11 +10,23 @@ environment:
 dependencies:
   http: ^1.0.0       # Downgraded to match what flutter_svg uses
   logging: ^1.2.0
-  web_socket_channel: ^2.4.4 # Updated for broader compatibility
   sse_channel: ^0.1.1
   equatable: ^2.0.5
   meta: ^1.15.0       # Explicitly added to match Flutter SDK's pinned version
 
+  web_socket_channel: 
+    git:
+      url: https://github.com/AliNaim211/http.git
+      path: pkgs/web_socket_channel
+      ref: master
+
 dev_dependencies:
   lints: ^3.0.0
   test: ^1.24.4
+
+dependency_overrides:
+  web_socket_channel: 
+    git:
+      url: https://github.com/AliNaim211/http.git
+      path: pkgs/web_socket_channel
+      ref: master
